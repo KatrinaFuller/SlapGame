@@ -46,12 +46,25 @@ function numberOfHits() {
   update();
 };
 
-function hurtTarget() {
-  target.items.push(items);
+function blood() {
+  target.items.push(items.blood);
 };
 
-// calling this function is making the items object be pushed onto the target items array
-hurtTarget();
+blood();
+
+function sword() {
+  target.items.push(items.sword);
+};
+
+sword();
+
+function crocodile() {
+  target.items.push(items.crocodile);
+};
+
+crocodile();
+
+
 
 function addMods() {
   let modifierTotal = 0;
