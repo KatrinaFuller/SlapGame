@@ -4,24 +4,39 @@ let target = {
   hits: 0
 }
 
+let items = {
+  blood: {
+    name: "blood",
+    modifier: 1, // reduces by an exxtra 1
+    description: "Ouch my eyes!"
+  },
+  sword: {
+    name: "sword",
+    modifier: 2, // reduces by an extra 2
+    description: "Don't cut me!"
+  },
+  crocodile: {
+    name: "crocodile",
+    modifier: 5, // reduces by an extra 5
+    description: "My other hand!"
+  }
+}
+
 
 function slap() {
   target.health--;
-  //alert(health);
   update();
   numberOfHits();
 }
 
 function punch() {
   target.health -= 5;
-  //alert(health);
   update();
   numberOfHits();
 }
 
 function kick() {
   target.health -= 10;
-  //alert(health);
   update();
   numberOfHits();
 }
