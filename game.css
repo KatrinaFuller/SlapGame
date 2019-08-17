@@ -8,8 +8,12 @@
   background-position-x: center;
 }
 
+.info-font{
+  font-size: 24px;
+}
+
 .captian-hook {
-  width: 200px;
+  width: 209px;
 }
 
 .gray-button{
@@ -25,3 +29,6 @@
   background-color:#dc5425;
 }
 
+h4{
+  font-size: 30px;
+}
