@@ -27,18 +27,21 @@ function slap() {
   target.health -= 1 + addMods();
   update();
   numberOfHits();
+  gameOver();
 };
 
 function punch() {
   target.health -= 5 + addMods();
   update();
   numberOfHits();
+  gameOver();
 };
 
 function kick() {
   target.health -= 10 + addMods();
   update();
   numberOfHits();
+  gameOver();
 };
 
 function numberOfHits() {
@@ -65,7 +68,7 @@ function addMods() {
   return modifierTotal;
 };
 
-// responsible for updatig the user interface whenever a value changes
+// responsible for updating the user interface whenever a value changes
 function update() {
   let targetHealthElement = document.querySelector('#health');
   targetHealthElement.textContent = target.health.toString();
@@ -75,3 +78,25 @@ function update() {
 };
 
 update();
+
+function restartGame() {
+  if (confirm("Are you sure you want to restart this game?")) {
+    target.health = 100;
+    target.hits = 0;
+    target.items = [];
+    update();
+  }
+};
+
+// game over when health = 0
+// pop up message saying game over and asking if want to play again
+// if yes, restart game
+// if no, nothing
+
+function gameOver() {
+  if (target.health <= 0) {
+    //console.log("dead");
+    alert("Congrats! You killed Captian Hook!");
+    restartGame();
+  }
+};
