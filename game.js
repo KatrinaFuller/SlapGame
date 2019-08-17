@@ -24,19 +24,19 @@ let items = {
 };
 
 function slap() {
-  target.health--;
+  target.health -= 1 + addMods();
   update();
   numberOfHits();
 };
 
 function punch() {
-  target.health -= 5;
+  target.health -= 5 + addMods();
   update();
   numberOfHits();
 };
 
 function kick() {
-  target.health -= 10;
+  target.health -= 10 + addMods();
   update();
   numberOfHits();
 };
@@ -46,32 +46,23 @@ function numberOfHits() {
   update();
 };
 
-function blood() {
-  target.items.push(items.blood);
+function addItemToTarget(itemName) {
+  if (itemName === "blood") {
+    target.items.push(items.blood);
+  } else if (itemName === "sword") {
+    target.items.push(items.sword);
+  } else if (itemName === "crocodile") {
+    target.items.push(items.crocodile);
+  }
 };
-
-blood();
-
-function sword() {
-  target.items.push(items.sword);
-};
-
-sword();
-
-function crocodile() {
-  target.items.push(items.crocodile);
-};
-
-crocodile();
-
-
 
 function addMods() {
   let modifierTotal = 0;
   // need to add the value of the modifiers used
-  for (let i = 0; i < target.items; i++) {
-    // modifierTotal += 
+  for (let i = 0; i < target.items.length; i++) {
+    modifierTotal += target.items[i].modifier
   };
+  return modifierTotal;
 };
 
 // responsible for updatig the user interface whenever a value changes
