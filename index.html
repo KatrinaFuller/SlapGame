@@ -7,15 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
   <link rel="stylesheet" href="game.css">
   <title>Slap Game</title>
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid text-center background">
     <div class="row">
-      <div class="col">
-        <span>Target Name: <span id="target-name">Captian Hook</span></span><br>
+      <div class="col-12">
+        <h1>Slap, Punch, Kick Captian Hook!</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <span>Target: <span id="target-name">Captian Hook</span></span><br>
         <span>Health: <span id="health">--</span></span><br>
         <span>Hits: <span id="hits">--</span></span>
       </div>
@@ -25,22 +31,34 @@
       </div>
     </div>
     <div class="row">
-      <div class="col">
-        <button type="button" class="btn btn-primary" onclick="slap()">Slap</button>
-        <button type="button" class="btn btn-primary" onclick="punch()">Punch</button>
-        <button type="button" class="btn btn-primary" onclick="kick()">Kick</button>
+      <div class="col-12">
+        <h4>Attacks</h4>
+      </div>
+      <div class="col-12">
+        <button type="button" class="btn gray-button" onclick="slap()"><i class="fas fa-hand-paper"></i>
+          Slap
+        </button>
+        <button type="button" class="btn gray-button" onclick="punch()"><i class="fas fa-hand-rock"></i>
+          Punch
+        </button>
+        <button type="button" class="btn gray-button" onclick="kick()"><i class="fas fa-shoe-prints"></i>
+          Kick
+        </button>
       </div>
     </div>
     <div class="row">
-      <div class="col" id="items">
-        <button type="button" class="btn btn-danger" onclick="addItemToTarget('blood')">Blood</button>
-        <button type="button" class="btn btn-danger" onclick="addItemToTarget('sword')">Sword</button>
-        <button type="button" class="btn btn-danger" onclick="addItemToTarget('crocodile')">Crocodile</button>
+      <div class="col-12">
+        <h4>Items</h4>
+      </div>
+      <div class="col-12" id="items">
+        <button type="button" class="btn item-button" onclick="addItemToTarget('blood')">Blood</button>
+        <button type="button" class="btn item-button" onclick="addItemToTarget('sword')">Sword</button>
+        <button type="button" class="btn item-button" onclick="addItemToTarget('crocodile')">Crocodile</button>
       </div>
     </div>
     <div class="row">
-      <div class="col">
-        <button type="button" class="btn btn-warning" onclick="restartGame()">Restart</button>
+      <div class="col p-4">
+        <button type="button" class="btn restart-button" onclick="restartGame()">Restart</button>
       </div>
     </div>
   </div>
