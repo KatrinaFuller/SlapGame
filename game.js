@@ -18,7 +18,7 @@ let items = {
   },
   crocodile: {
     name: "crocodile",
-    modifier: 5, // reduces by an extra 5
+    modifier: 3, // reduces by an extra 5
     description: "My other hand!"
   }
 };
@@ -59,6 +59,15 @@ function addItemToTarget(itemName) {
   }
 };
 
+// function toast() {
+//   $(document).ready(function () {
+//     $('#blood').click(function)(){
+//       $('.toast').toast({ delay: 3000 });
+//       $('.toast').toast('show');
+//     };
+//   });
+// }
+
 function addMods() {
   let modifierTotal = 0;
   // need to add the value of the modifiers used
@@ -91,7 +100,6 @@ function restartGame() {
 // game over when health = 0
 // pop up message saying game over and asking if want to play again
 // if yes, restart game
-// if no, nothing
 
 function gameOver() {
   if (target.health <= 0) {
