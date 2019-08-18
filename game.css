@@ -6,6 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
+  background-position-y: center;
 }
 
 .info-font{
@@ -13,7 +14,7 @@
 }
 
 .captian-hook {
-  width: 209px;
+  width: 200px;
 }
 
 .gray-button{
@@ -31,5 +32,6 @@
 
 h4{
   font-size: 30px;
+  /* color: white; */
 }
 

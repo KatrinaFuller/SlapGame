@@ -13,10 +13,14 @@
 </head>
 
 <body>
-  <div class="container-fluid text-center background">
-    <div class="row">
+  <div class="container-fluid text-center background ">
+    <div class="row justify-content-center padding-top">
       <div class="col-12">
         <h1>Slap, Punch, Kick Captian Hook!</h1>
+      </div>
+      <div class="col-sm-12 col-md-4 ">
+        <p>Directions: Click any attack to bring down Captian Hook! You can also add an item before the attack to help
+          bring him down faster. Have fun!</p>
       </div>
     </div>
     <div class="row">
@@ -32,7 +36,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <h4>Attacks</h4>
+        <h4><b>Attacks</b></h4>
       </div>
       <div class="col-12">
         <button type="button" class="btn gray-button" onclick="slap()"><i class="fas fa-hand-paper"></i>
@@ -48,7 +52,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <h4>Items</h4>
+        <h4><b>Items</b></h4>
       </div>
       <div class="col-12" id="items">
         <button type="button" class="btn item-button popup" id="blood" onclick="addItemToTarget('blood')">Blood</button>
