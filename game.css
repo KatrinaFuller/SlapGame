@@ -35,11 +35,11 @@ h4{
   /* color: white; */
 }
 
-#snackbar{
+#blood-snackbar, #sword-snackbar, #crocodile-snackbar{
   visibility: hidden;
   min-width: 250px;
   margin-left: -125px;
-  background-color: blue;
+  background-color: red;
   color: white;
   text-align: center;
   border-radius: 2px;
@@ -50,7 +50,7 @@ h4{
 }
 
 /* show the snackbar */
-#snackbar.show{
+#blood-snackbar.show, #sword-snackbar.show, #crocodile-snackbar.show{
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;

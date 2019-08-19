@@ -52,23 +52,36 @@ function numberOfHits() {
 function addItemToTarget(itemName) {
   if (itemName === "blood") {
     target.items.push(items.blood);
-    // snackbar();
+    bloodSnackbar();
   } else if (itemName === "sword") {
     target.items.push(items.sword);
-    // snackbar();
+    swordSnackbar();
   } else if (itemName === "crocodile") {
     target.items.push(items.crocodile);
-    snackbar();
+    crocodileSnackbar();
   }
 };
 
-function snackbar() {
-  let bar = document.getElementById("snackbar");
+function bloodSnackbar() {
+  let bar = document.getElementById("blood-snackbar");
   bar.className = "show";
   // bar.classList.add('show');
   setTimeout(function () { bar.className = bar.className.replace("show", ""); }, 3000);
 }
 
+function swordSnackbar() {
+  let bar = document.getElementById("sword-snackbar");
+  bar.className = "show";
+  // bar.classList.add('show');
+  setTimeout(function () { bar.className = bar.className.replace("show", ""); }, 3000);
+}
+
+function crocodileSnackbar() {
+  let bar = document.getElementById("crocodile-snackbar");
+  bar.className = "show";
+  // bar.classList.add('show');
+  setTimeout(function () { bar.className = bar.className.replace("show", ""); }, 3000);
+}
 
 function addMods() {
   let modifierTotal = 0;
