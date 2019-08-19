@@ -52,21 +52,23 @@ function numberOfHits() {
 function addItemToTarget(itemName) {
   if (itemName === "blood") {
     target.items.push(items.blood);
+    // snackbar();
   } else if (itemName === "sword") {
     target.items.push(items.sword);
+    // snackbar();
   } else if (itemName === "crocodile") {
     target.items.push(items.crocodile);
+    snackbar();
   }
 };
 
-// function toast() {
-//   $(document).ready(function () {
-//     $('#blood').click(function)(){
-//       $('.toast').toast({ delay: 3000 });
-//       $('.toast').toast('show');
-//     };
-//   });
-// }
+function snackbar() {
+  let bar = document.getElementById("snackbar");
+  bar.className = "show";
+  // bar.classList.add('show');
+  setTimeout(function () { bar.className = bar.className.replace("show", ""); }, 3000);
+}
+
 
 function addMods() {
   let modifierTotal = 0;
@@ -104,6 +106,7 @@ function restartGame() {
 function gameOver() {
   if (target.health <= 0) {
     //console.log("dead");
+
     alert("Congrats! You killed Captian Hook!");
     restartGame();
   }
